@@ -1,10 +1,12 @@
-#include <iostream>
-#include <vector>
-#include <utility>
+#include<iostream>
+#include<vector>
+#include<utility>
+#include<string>
+
 using namespace std;
 
 int findLen(int i);
-bool duplicate(vector<pair<int,int>>::iterator bIt, vector<pair<int,int>>::iterator eIt, int x);
+int duplicate(vector<pair<int,int>>::iterator bIt, vector<pair<int,int>>::iterator eIt, int x);
 
 int main(){
 	int max = 0;
@@ -15,10 +17,12 @@ int main(){
 		}
 	}
 	cout << max << endl;
+	
 	return 0;
 }
 int findLen(int i){
 	vector<pair<int,int>> digits;
+	
 	int x = 1;
 	do{ 
 		int count=0;
@@ -26,7 +30,7 @@ int findLen(int i){
 			count++;
 			x *= 10;
 		}
-		digits.push_back(pair<int,int>(x,count));
+		digits.push_bac(pair<int,int>(x,count));
 		x %= i;
 	}
 	while(!duplicate(digits.begin(),digits.end()-1,digits.back().first));
@@ -42,7 +46,7 @@ int findLen(int i){
 	count += 1;
 	return count;
 }
-bool duplicate(vector<pair<int,int>>::iterator bIt, vector<pair<int,int>>::iterator eIt, int x){
+int duplicate(vector<pair<int,int>>::iterator bIt, vector<pair<int,int>>::iterator eIt, int x){
 	for(auto it = bIt; it != eIt; it++){
 		if(it->first == x ){
 			return true;
