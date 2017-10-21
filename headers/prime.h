@@ -10,6 +10,6 @@ bool is_prime(T a){
 		if(a%i == 0){
 			return false;
 		}
-	}
+}
 	return true;
 }
