@@ -1,2 +1,6 @@
 problems/*
+headers/*
+!headers/*.cpp
+!headers/*.h
+!headers/Makefile
 !problems/*.cpp
