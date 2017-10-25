@@ -11,3 +11,16 @@ void list_divisors_0(T num, std::vector<T> * v){
         }
     }
 }
+
+template<typename T>
+T gcd(T a, T b){
+	if(a == 0 or b == 0){
+		return a + b;
+	}
+	else if(a > b){
+		return gcd(a%b,b);
+	}
+	else{
+		return gcd(a,b%a);
+	}
+}
