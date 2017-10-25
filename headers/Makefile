@@ -1,4 +1,6 @@
 CXX = g++
 CXXFLAGS =	-std=c++14 -Wconversion -Wall -Werror -Wextra -pedantic -O3
-% : %.cpp 
+%.exe : %.cpp 
 	$(CXX) $(CXXFLAGS) $< -o $@
+clean :
+	rm *.exe
