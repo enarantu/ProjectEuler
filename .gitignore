@@ -1,6 +1,8 @@
 problems/*
 headers/*
+self_contained_solutions/*
 !headers/*.cpp
 !headers/*.h
 !headers/Makefile
 !problems/*.cpp
+!self_contained_solutions/*.cpp
